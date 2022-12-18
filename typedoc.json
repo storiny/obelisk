@@ -1,0 +1,10 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "out": "./docs",
+  "name": "Obelisk",
+  "readme": "none",
+  "includeVersion": true,
+  "githubPages": true,
+  "hideGenerator": false,
+  "tsconfig": "./tsconfig.bundle.json"
+}

@@ -1,0 +1,43 @@
+name: 'CI'
+
+on: push
+
+jobs:
+  clean:
+    name: 'Clean for build'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Checkout the repository'
+        uses: 'actions/checkout@v3'
+
+      - name: 'Setup Node.js and npm'
+        uses: './.github/actions/setup'
+
+      - name: 'Execute the clean script'
+        run: 'npm run clean'
+
+  lint:
+    name: 'Run ESLint and Prettier'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Checkout the repository'
+        uses: 'actions/checkout@v3'
+
+      - name: 'Setup Node.js and npm'
+        uses: './.github/actions/setup'
+
+      - name: 'Execute the lint script'
+        run: 'npm run lint'
+
+  bundle:
+    name: 'Bundle package with Rollup.js'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Checkout the repository'
+        uses: 'actions/checkout@v3'
+
+      - name: 'Setup Node.js and npm'
+        uses: './.github/actions/setup'
+
+      - name: 'Execute the build script'
+        run: 'npm run build'

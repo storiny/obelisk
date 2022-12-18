@@ -1,0 +1,1 @@
+{"version":3,"file":"CubeDimension.d.ts","sourceRoot":"","sources":["../../src/dimensions/CubeDimension.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,iBAAiB,EAAE,MAAM,qBAAqB,CAAC;AAExD,qBAAa,aAAc,SAAQ,iBAAiB;gBACtC,KAAK,CAAC,EAAE,MAAM,EAAE,KAAK,CAAC,EAAE,MAAM,EAAE,KAAK,CAAC,EAAE,MAAM;WAgBnC,QAAQ,IAAI,MAAM;CAG1C"}

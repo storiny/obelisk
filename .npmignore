@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+npm-shrinkwrap.json
+yarn.lock
+.pnp.*
+.yarn/
+.yarnrc
+.yarnrc.yaml
+pnpm-lock.yaml
+pnpm-workspace.yaml
+pnpmfile.js
+*.log
+*.log.*
+.idea/
+coverage/
+docs/

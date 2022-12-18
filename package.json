@@ -1,7 +1,6 @@
 {
-  "name": "obelisk.js",
-  "title": "obelisk.js",
-  "description": "JavaScript Library for Building Pixel Isometric Element with HTML5 Canvas",
+  "name": "@storiny/obelisk",
+  "description": "Build isometrics elements with Canvas",
   "keywords": [
     "obelisk",
     "javascript",
@@ -13,34 +12,80 @@
     "art",
     "2.5D"
   ],
-  "version": "1.2.2",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "cdn": "dist/index.umd.js",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "jsdelivr": "dist/index.umd.js",
+  "umd:main": "dist/index.umd.js",
+  "exports": {
+    ".": [
+      {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs",
+        "default": "./dist/index.js"
+      },
+      "./dist/index.js"
+    ]
+  },
   "author": {
     "name": "Max Huang",
-    "url": "http://github.com/nosir",
+    "url": "https://github.com/nosir",
     "email": "risonhuang@gmail.com"
   },
+  "contributors": [
+    {
+      "name": "zignis",
+      "url": "https://github.com/zignis"
+    }
+  ],
   "license": "MIT",
-  "bugs": "https://github.com/nosir/obelisk.js/issues",
-  "homepage": "https://github.com/nosir/obelisk.js",
-  "docs": "https://github.com/nosir/obelisk.js/blob/master/README.md",
-  "dependencies": {},
+  "bugs": "https://github.com/storiny/obelisk/issues",
+  "homepage": "https://github.com/storiny/obelisk",
+  "docs": "https://storiny.github.io/obelisk",
+  "scripts": {
+    "doc": "typedoc src/index.ts",
+    "clean": "rimraf dist docs types coverage",
+    "lint": "eslint \"*/**/*.{ts,js,json}\"",
+    "lint:fix": "eslint \"*/**/*.{ts,js,json}\" --fix",
+    "build": "rollup --config ./rollup.config.mjs",
+    "prepublishOnly": "npm run clean && npm run doc && npm run build"
+  },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
     "browserify": "^13.0.0",
     "errorify": "^0.3.1",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
     "glob": "^7.0.3",
     "gulp": "^3.9.1",
     "gulp-header": "^1.7.1",
     "gulp-rename": "^1.2.2",
     "gulp-rimraf": "^0.2.0",
     "gulp-uglify": "^1.5.3",
+    "prettier": "^2.8.1",
     "require-dir": "^0.3.0",
+    "rollup": "^3.7.5",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
     "run-sequence": "1.1.5",
+    "typedoc": "^0.23.23",
+    "typescript": "^4.9.4",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
-  "main":"src/obelisk.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nosir/obelisk.js.git"
+    "url": "https://github.com/storiny/obelisk.git"
   }
 }
