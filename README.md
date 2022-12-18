@@ -52,7 +52,7 @@ Package exports named imports (tree shaking is supported).
 import {
   Point,
   PixelView,
-  CubDimension,
+  CubeDimension,
   ColorPattern,
   CubeColor,
   Cube
