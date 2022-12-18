@@ -1,6 +1,6 @@
 # Obelisk (TS)
 
-> Custom port of [obelisk.js](https://github.com/nosir/obelisk.js) to TypeScript, side effects free.
+> Custom port of [obelisk.js](https://github.com/nosir/obelisk.js) to TypeScript, free of side effects.
 
 obelisk.js is a JavaScript library for building isometric pixel objects.
 
