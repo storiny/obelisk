@@ -1601,29 +1601,29 @@ var CanvasTool = /** @class */ (function () {
     return CanvasTool;
 }());
 
-var GRASS_GREEN = 0xccff00;
-var YELLOW = 0xffff00;
-var WINE_RED = 0xff0099;
-var PINK = 0xff7cbf;
-var PURPLE = 0xcc00ff;
-var BLUE = 0x00ccff;
-var GRAY = 0xeeeeee;
-var BLACK = 0x666666;
-var FINE_COLORS = [
-    GRASS_GREEN,
-    YELLOW,
-    WINE_RED,
-    PINK,
-    PURPLE,
-    BLUE,
-    GRAY,
-    BLACK,
-];
 var ColorPattern = /** @class */ (function () {
     function ColorPattern() {
+        this.GRASS_GREEN = 0xccff00;
+        this.YELLOW = 0xffff00;
+        this.WINE_RED = 0xff0099;
+        this.PINK = 0xff7cbf;
+        this.PURPLE = 0xcc00ff;
+        this.BLUE = 0x00ccff;
+        this.GRAY = 0xeeeeee;
+        this.BLACK = 0x666666;
+        this.FINE_COLORS = [
+            this.GRASS_GREEN,
+            this.YELLOW,
+            this.WINE_RED,
+            this.PINK,
+            this.PURPLE,
+            this.BLUE,
+            this.GRAY,
+            this.BLACK,
+        ];
     }
-    ColorPattern.getRandomComfortableColor = function () {
-        return FINE_COLORS[Math.floor(Math.random() * FINE_COLORS.length)];
+    ColorPattern.prototype.getRandomComfortableColor = function () {
+        return this.FINE_COLORS[Math.floor(Math.random() * this.FINE_COLORS.length)];
     };
     ColorPattern.toString = function () {
         return "[ColorPattern]";
