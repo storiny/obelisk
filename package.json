@@ -75,6 +75,7 @@
     "gulp-uglify": "^1.5.3",
     "prettier": "^2.8.1",
     "require-dir": "^0.3.0",
+    "rimraf": "^3.0.2",
     "rollup": "^3.7.5",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
