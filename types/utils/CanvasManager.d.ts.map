@@ -1,1 +1,0 @@
-{"version":3,"file":"CanvasManager.d.ts","sourceRoot":"","sources":["../../src/utils/CanvasManager.ts"],"names":[],"mappings":"AAAA,8BAAsB,aAAa;IACjC,OAAc,aAAa,EAAE,iBAAiB,GAAG,IAAI,CAAC;WAExC,gBAAgB,IAAI,iBAAiB,GAAG,IAAI;WAK5C,YAAY,IAAI,iBAAiB;WAIjC,QAAQ,IAAI,MAAM;CAGjC"}

@@ -3,6 +3,18 @@ name: 'CI'
 on: push
 
 jobs:
+  install:
+    name: 'Install deps'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Checkout the repository'
+        uses: 'actions/checkout@v3'
+
+      - name: 'Execute the install command'
+        uses: 'borales/actions-yarn@v4'
+        with:
+          cmd: install
+
   clean:
     name: 'Clean for build'
     runs-on: 'ubuntu-latest'
@@ -33,7 +45,7 @@ jobs:
     steps:
       - name: 'Checkout the repository'
         uses: 'actions/checkout@v3'
-        
+
       - name: 'Execute the build script'
         uses: 'borales/actions-yarn@v4'
         with:

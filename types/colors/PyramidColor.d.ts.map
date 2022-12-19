@@ -1,1 +1,0 @@
-{"version":3,"file":"PyramidColor.d.ts","sourceRoot":"","sources":["../../src/colors/PyramidColor.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,iBAAiB,CAAC;AAGhD,qBAAa,YAAa,SAAQ,aAAa;IACtC,cAAc,SAAO;gBAG1B,MAAM,CAAC,EAAE,MAAM,EACf,eAAe,CAAC,EAAE,MAAM,EACxB,IAAI,CAAC,EAAE,MAAM,EACb,KAAK,CAAC,EAAE,MAAM;IAWT,eAAe,CAAC,KAAK,EAAE,MAAM,GAAG,YAAY;WAU5B,QAAQ,IAAI,MAAM;CAG1C"}
