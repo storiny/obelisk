@@ -14,7 +14,7 @@ jobs:
         uses: './.github/actions/setup'
 
       - name: 'Execute the clean script'
-        run: 'npm run clean'
+        run: 'yarn clean'
 
   lint:
     name: 'Run ESLint and Prettier'
@@ -27,7 +27,7 @@ jobs:
         uses: './.github/actions/setup'
 
       - name: 'Execute the lint script'
-        run: 'npm run lint'
+        run: 'yarn lint'
 
   bundle:
     name: 'Bundle package with Rollup.js'
@@ -40,4 +40,4 @@ jobs:
         uses: './.github/actions/setup'
 
       - name: 'Execute the build script'
-        run: 'npm run build'
+        run: 'yarn build'
