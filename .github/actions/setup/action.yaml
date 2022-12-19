@@ -1,12 +1,14 @@
 name: 'Setup'
+
 description: "Setups up node.js and yarn"
+
 runs:
   using: 'composite'
   steps:
-  - uses: actions/checkout@v3
-  - uses: actions/setup-node@v3
-    with:
-      node-version: '14'
-      cache: 'yarn'
-  - run: yarn install --frozen-lockfile # optional, --immutable
-  - run: yarn test
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+        cache: 'yarn'
+    - run: yarn install --frozen-lockfile
+    
