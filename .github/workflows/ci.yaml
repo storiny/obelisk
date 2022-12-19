@@ -10,6 +10,9 @@ jobs:
       - name: 'Checkout the repository'
         uses: 'actions/checkout@v3'
         
+      - name: 'Setup Node.js and Yarn'
+        uses: './.github/actions/setup'
+        
       - name: 'Execute the clean script'
         run: 'yarn clean'
 
@@ -19,7 +22,10 @@ jobs:
     steps:
       - name: 'Checkout the repository'
         uses: 'actions/checkout@v3'
-
+        
+      - name: 'Setup Node.js and Yarn'
+        uses: './.github/actions/setup'
+        
       - name: 'Execute the lint script'
         run: 'yarn lint'
 
@@ -29,6 +35,9 @@ jobs:
     steps:
       - name: 'Checkout the repository'
         uses: 'actions/checkout@v3'
-
+        
+      - name: 'Setup Node.js and Yarn'
+        uses: './.github/actions/setup'
+        
       - name: 'Execute the build script'
         run: 'yarn build'
