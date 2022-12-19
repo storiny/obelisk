@@ -1,0 +1,1 @@
+{"version":3,"file":"SideColor.d.ts","sourceRoot":"","sources":["../../src/colors/SideColor.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,iBAAiB,CAAC;AAGhD,qBAAa,SAAU,SAAQ,aAAa;IACnC,cAAc,SAAO;gBAEhB,MAAM,CAAC,EAAE,MAAM,EAAE,KAAK,CAAC,EAAE,MAAM;IAMpC,eAAe,CAAC,KAAK,EAAE,MAAM,GAAG,SAAS;WAOzB,QAAQ,IAAI,MAAM;CAG1C"}
