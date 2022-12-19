@@ -15,18 +15,6 @@ jobs:
         with:
           cmd: install
 
-  clean:
-    name: 'Clean for build'
-    runs-on: 'ubuntu-latest'
-    steps:
-      - name: 'Checkout the repository'
-        uses: 'actions/checkout@v3'
-
-      - name: 'Execute the clean script'
-        uses: 'borales/actions-yarn@v4'
-        with:
-          cmd: clean
-
   lint:
     name: 'Run ESLint and Prettier'
     runs-on: 'ubuntu-latest'
