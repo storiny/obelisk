@@ -6,17 +6,36 @@ on:
 
 jobs:
   build:
-    name: 'Release the package on NPM'
+    name: 'Release the package to NPM'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn install --frozen-lockfile
-      - run: yarn clean
-      - run: yarn build
-      - run: yarn publish
+
+      - name: Install dependencies
+        uses: 'borales/actions-yarn@v4'
+        with:
+          cmd: install
+
+      - name: Prune old files
+        uses: 'borales/actions-yarn@v4'
+        with:
+          cmd: clean
+
+      - name: Build package
+        uses: 'borales/actions-yarn@v4'
+        with:
+          cmd: build
+
+      - name: Publish package to NPM
+        uses: 'borales/actions-yarn@v4'
+        with:
+          cmd: publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
