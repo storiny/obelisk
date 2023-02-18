@@ -1,5 +1,5 @@
 /*!
- * Obelisk (TS) v1.1.2
+ * Obelisk (TS) v1.1.3
  * Copyright (c) Max Huang, Storiny
  * Fork (https://github.com/storiny/obelisk) of https://github.com/nosir/obelisk.js
  * Released under the MIT License.
