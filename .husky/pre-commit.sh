@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm install
-npm run clean
-npm run lint:fix
-npm run test
-npm run doc
-npm run build
+yarn install
+yarn clean
+yarn lint:fix
+yarn test
+yarn doc
+yarn build
 
 echo
 touch .commit
