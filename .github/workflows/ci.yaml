@@ -3,17 +3,20 @@ name: 'CI'
 on: push
 
 jobs:
-  install:
-    name: 'Install deps'
+  clean:
+    name: 'Clean for build'
     runs-on: 'ubuntu-latest'
     steps:
       - name: 'Checkout the repository'
         uses: 'actions/checkout@v3'
 
-      - name: 'Execute the install command'
+      - name: 'Setup Node.js and Yarn'
+        uses: './.github/actions/setup'
+
+      - name: 'Execute the clean script'
         uses: 'borales/actions-yarn@v4'
         with:
-          cmd: install
+          cmd: clean
 
   lint:
     name: 'Run ESLint and Prettier'
@@ -22,10 +25,29 @@ jobs:
       - name: 'Checkout the repository'
         uses: 'actions/checkout@v3'
 
+      - name: 'Setup Node.js and Yarn'
+        uses: './.github/actions/setup'
+
       - name: 'Execute the lint script'
         uses: 'borales/actions-yarn@v4'
         with:
           cmd: lint
+
+
+  test:
+    name: 'Run unit tests with Jest'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Checkout the repository'
+        uses: 'actions/checkout@v3'
+
+      - name: 'Setup Node.js and Yarn'
+        uses: './.github/actions/setup'
+
+      - name: 'Execute the test script'
+        uses: 'borales/actions-yarn@v4'
+        with:
+          cmd: test
 
   bundle:
     name: 'Bundle package with Rollup.js'
@@ -33,6 +55,9 @@ jobs:
     steps:
       - name: 'Checkout the repository'
         uses: 'actions/checkout@v3'
+
+      - name: 'Setup Node.js and Yarn'
+        uses: './.github/actions/setup'
 
       - name: 'Execute the build script'
         uses: 'borales/actions-yarn@v4'
