@@ -1,7 +1,6 @@
-// @ts-check
-
 import { terser } from "rollup-plugin-terser";
 import typescript2 from "rollup-plugin-typescript2";
+import type { OutputOptions, RollupOptions } from "rollup";
 import pkg from "./package.json" assert { type: "json" };
 
 const banner = `/*!
@@ -12,24 +11,15 @@ const banner = `/*!
  */
 `;
 
-/**
- * @param {import('rollup').OutputOptions} options
- * @returns {import('rollup').OutputOptions}
- */
-function createOutputOptions(options) {
-  return {
-    banner,
-    name: "obelisk",
-    exports: "named",
-    sourcemap: true,
-    ...options,
-  };
-}
+const createOutputOptions = (options: OutputOptions): OutputOptions => ({
+  banner,
+  name: "obelisk",
+  exports: "named",
+  sourcemap: true,
+  ...options,
+});
 
-/**
- * @type {import('rollup').RollupOptions}
- */
-const options = {
+const options: RollupOptions = {
   input: "./src/index.ts",
   output: [
     createOutputOptions({

@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "module": "ES2020",
+    "module": "ESNext",
     "target": "ES5",
     "charset": "utf-8",
     "newLine": "LF",
@@ -10,5 +10,5 @@
     "declarationDir": "types/",
     "declarationMap": true
   },
-  "exclude": ["src/**/*.test.ts"]
+  "exclude": ["src/**/*.test.ts", "rollup.config.ts"]
 }

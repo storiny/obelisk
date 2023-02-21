@@ -54,11 +54,12 @@
     "clean": "rimraf dist docs types coverage",
     "lint": "eslint \"*/**/*.{ts,js,json}\"",
     "lint:fix": "eslint \"*/**/*.{ts,js,json}\" --fix",
-    "build": "rollup --config ./rollup.config.mjs",
+    "build": "rollup --config rollup.config.ts --configPlugin typescript",
     "prepublishOnly": "yarn build",
     "test": "echo \"No tests written yet\""
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.30.0",
