@@ -3,7 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "alwaysStrict": true,
     "exactOptionalPropertyTypes": true,
@@ -19,10 +19,10 @@
     "strict": true,
     "lib": [
       "ES2020",
-      "dom"
+      "DOM"
     ],
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["src/**/*.ts"]
 }

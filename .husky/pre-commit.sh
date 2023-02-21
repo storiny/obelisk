@@ -8,6 +8,6 @@ yarn test
 yarn doc
 yarn build
 
-echo
-touch .commit
+git add .
+
 exit
